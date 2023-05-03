@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSLibrary</title>
+    <link rel="stylesheet" href="main.css" />
+</head>
+<body>
+    <h1>Your Library</h1>
+    <div class = "container">
+        <button class = "addBookBtn" id = "addBookBtn">Add Book</button>
+        <div class = "grid" id = "bookgrid"></div>
+    </div>
+
+    <div class = "popUp" id = "popUp"> 
+        <form class = "bookform" id = "bookform">
+            <span class="close">&times;</span>
+            <p class = "headForm">Add Your Book</p>
+            <div id='textInput'> 
+                <p><input type='text' id='title' name='title' placeholder='Title'></p>
+                <p><input type='text' id='author' name='author' placeholder='Author'></p>
+                <p><input type='text' id='pages' name='pages' placeholder='Pages'></p>
+            </div>
+            <div class = "checkBox" id = "checkBox">
+                <p> Did you read this: <input type='checkbox' id='read' name='read' value='yes'> </p>
+            </div>
+            <button type = "submit" form = "bookform" id = "addBtn" class = "addBtn">ADD</button>
+        </form>
+    </div>
+</body>
+<script src="main.js"> </script> 
+</html>

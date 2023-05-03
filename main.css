@@ -1,0 +1,106 @@
+
+.addBookBtn {
+    background-color: rgb(38, 170, 88);
+    transition: 0.5s ease;
+}
+.addBookBtn:hover {
+    background-color: brown;
+} 
+.popUp {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color: rgba(161, 161, 161, 0.6);
+  border-radius: var(--border-radius);
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  transform: scale(0);
+  transition: 0.2s ease-in-out;
+}
+
+.bookform {
+    height: 300px;
+    width: 250px;
+    background-color: rgb(233, 161, 161);
+    border-radius: 10px;
+    border:rgba(0, 0, 0, 0.6) solid;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.5s ease;
+    padding: 1%;
+    box-shadow: var(rgba(0, 0, 0, 0.16) 0px 1px 4px);
+}
+.headForm {
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+input#title {
+    height: 4vh;
+    width: 90%;
+    font-size: 17px;
+    border: solid 3px black;
+    border-radius: 5px;
+    margin-left: 3%;
+    
+}
+input#author {
+    height: 4vh;
+    width: 90%;
+    font-size: 17px;
+    border: solid 3px black;
+    border-radius: 5px;
+    margin-left: 3%;
+}
+input#pages {
+    height: 4vh;
+    width: 90%;
+    font-size: 17px;
+    border: solid 3px black;
+    border-radius: 5px;
+    margin-left: 3%;
+}
+.checkBox{
+    font-size: 17px;
+    margin-left: 5%;
+}
+input#read {
+    transform: scale(2);
+    accent-color: white;
+}
+
+
+  
+.addBtn {
+    border:  2px black solid;
+    border-radius: 5px;
+    box-shadow: var(rgba(0, 0, 0, 0.16) 0px 1px 4px);
+    padding: 2%;
+    font-size: 17px;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 80px;
+    margin-left: 35%;
+}
+
+.addBtn:hover {
+    background-color: rgb(160, 77, 77);
+}
+.close {
+    color: #e6360a;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}

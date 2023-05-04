@@ -145,9 +145,9 @@ input#read {
     border-radius: 25px;
     padding: 15px;
     margin: 20px;
-    background-color: rgb(160, 96, 53);
+    background-color: rgb(238, 226, 157);
     box-shadow:  rgba(0, 0, 0, 0.16) 0px 1px 4px;
-    line-height: 1.2;
+    word-break: break-all;
 }
 .title {
     display: flex;
@@ -156,7 +156,6 @@ input#read {
     font-family:'Times New Roman', Times, serif;
     margin-bottom: 1px;
     margin-top: 2px;
-    outline: none;
 }
 
 .author {
@@ -175,7 +174,7 @@ input#read {
 
 .btn {
     width: 60%;
-    background-color: #d3d6c6;
+    background-color: #dfa935;
     margin-top: 10px;
     font-size: 17px;
 }

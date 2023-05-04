@@ -34,9 +34,14 @@ class Library {
             return this.books.indexOf(book);
         }
     }
+
+    copy(lib) {
+        this.books = lib.books;
+    }
+
 }
 
-const myLib = new Library();
+let myLib = new Library();
 const bookShelf = document.getElementById('bookshelf');
 const addBookBtn = document.getElementById('addBookBtn');
 const popUp = document.getElementById('popUp');
@@ -57,7 +62,9 @@ function getBookFromInput() {
     const title = document.getElementById('title').value;
     const author = document.getElementById('author').value;
     const pages = document.getElementById('pages').value;
-    const isRead = document.getElementById('read').value;
+    const isRead = document.getElementById('read').checked;
+
+
     return new Book(title, author, pages, isRead);
 }
 
@@ -66,7 +73,7 @@ submitBtn.addEventListener('click', (event) => {
     popUp.style.transform = "scale(0)";
     newBook = getBookFromInput();
     myLib.addBook(newBook);
-    //setData();
+    setData();
     showShelf();
 })
 
@@ -92,17 +99,16 @@ function renderBook(book) {
     author.classList.add('author');
     pages.classList.add('pages');
 
-    bookCard.setAttribute('id', myLib.indexOf(book));
+    bookCard.setAttribute('id', myLib.books.indexOf(book));
     removeBtn.setAttribute('id', 'removeBtn');
 
-    title.textContent =  "\""+ book.title + "\"";
+    title.textContent =  `"${book.title}"`;
     author.textContent = "by " + book.author;
     pages.textContent = book.pages + " pages";
 
     bookCard.appendChild(title);
     bookCard.appendChild(author);
     bookCard.appendChild(pages);
-
     if (book.isRead === false) {
         readBtn.textContent = "Not Read";
     } else {
@@ -116,15 +122,32 @@ function renderBook(book) {
 
     removeBtn.addEventListener('click', () => {
         myLib.books.splice(myLib.indexOf(book),1);
-        //setData();
+        setData();
         showShelf();
     });
 
     //add toggle ability to each book 'read' button on click
     readBtn.addEventListener('click', () => { 
         book.isRead = !book.isRead;
-        //setData(); 
+        setData(); 
         showShelf();
     }); 
 
 }
+
+function setData() {  
+    localStorage.removeItem('myLib');
+    localStorage.setItem('myLib', JSON.stringify(myLib));
+}
+
+function restore() {
+    if (!localStorage.myLib) {
+        showShelf();
+    } else {
+        let obj = JSON.parse(localStorage.getItem('myLib'));
+        myLib.copy(obj);
+        showShelf();
+    }
+}
+
+restore()

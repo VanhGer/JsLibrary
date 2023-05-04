@@ -79,9 +79,9 @@ function showShelf() {
 
 function renderBook(book) {  
     const bookCard = document.createElement('div');
-    const title = document.createElement('p');
-    const author = document.createElement('p');
-    const pages = document.createElement('p');
+    const title = document.createElement('div');
+    const author = document.createElement('div');
+    const pages = document.createElement('div');
     const readBtn = document.createElement('button');
     const removeBtn = document.createElement('button');
 

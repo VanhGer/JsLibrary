@@ -8,20 +8,19 @@
     <link rel="stylesheet" href="main.css" />
 </head>
 <body>
-    <h1>Your Library</h1>
+    <h2>Your Library</h2>
     <div class = "container">
-        <button class = "addBookBtn" id = "addBookBtn">Add Book</button>
-        <div class = "grid" id = "bookgrid"></div>
+        <button class = "addBookBtn" id = "addBookBtn">+ Add Book</button>
     </div>
-
+    <div class = "bookshelf" id = "bookshelf"></div>
     <div class = "popUp" id = "popUp"> 
         <form class = "bookform" id = "bookform">
             <span class="close">&times;</span>
             <p class = "headForm">Add Your Book</p>
             <div id='textInput'> 
-                <p><input type='text' id='title' name='title' placeholder='Title'></p>
-                <p><input type='text' id='author' name='author' placeholder='Author'></p>
-                <p><input type='text' id='pages' name='pages' placeholder='Pages'></p>
+                <p><input type='text' id='title' name='title' placeholder='Title' required></p>
+                <p><input type='text' id='author' name='author' placeholder='Author' required></p>
+                <p><input type='number' id='pages' name='pages' placeholder='Pages' required></p>
             </div>
             <div class = "checkBox" id = "checkBox">
                 <p> Did you read this: <input type='checkbox' id='read' name='read' value='yes'> </p>
